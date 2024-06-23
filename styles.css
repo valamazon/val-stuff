@@ -109,10 +109,9 @@ li > a {
 }
 
 .about-image {
-    max-width: 300px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 6px;
+    max-width: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
 }
 
