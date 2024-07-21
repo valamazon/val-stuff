@@ -143,118 +143,218 @@
     font-display: swap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    * {
-      scroll-behavior: smooth;
-    }
-  }
-
 body {
-    background-color: #FFFEFA;
     font-family: 'FreightSansLFPro Lig';
-    background-size: cover;
-    background-repeat: no-repeat;
     padding: 0;
     margin: 0;
 }
 
-.home {
-    background-image: url(images/background.jpg);
-    color: #FFFEFA;
-    background-color: #8C3434;
+img {
+    display: block;
+    width: 100%;
 }
 
-
-.about {
-    background-color: #FFFEFA;
-    color: #8C3434;
-}
-
-.nav1 {
-    list-style-type: none;
-    margin: 0;
-    padding: 15px;
-    position: relative;
-    left: 645px;
-    top: 74px;
-    color: #8C3434;
-    font-size: 25px;
-}
-
-.nav1 li{
-    padding: 2px;
-}
-
-header {
-    
-    display: flex;
-    justify-content: space-between;
-    padding: 45px 300px 0 300px;
-    height: 85px;
-}
-
-.nav2 {
-    display: flex;
-    list-style-type: none;
-}
-
-
-.nav2 li + li {
-    margin-left: 90px;
-}
-
-.nav2 li {
-    padding-bottom: 6px;
-    transition: all 300ms ease-in-out;
-    border-bottom: 3px solid transparent;
-}
-
-.nav2 li.is-active {
-    border-bottom: 3px solid rgba(140, 52, 52, 0.6);
-}
-
-.nav2 li:hover {
-    color: #8C3434;
-    border-bottom: 3px solid rgba(140, 52, 52, 0.6);
-    transition: all 300ms ease-in-out;
-    
-}
-
-li > a {
+a {
     color: inherit;
     text-decoration: none;
 }
 
-.mail {
-    color:inherit;
-    text-decoration: none;
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FFFEFA;
+    background-color: #8C3434;
+    font-family: 'FreightSansLFPro';
+}
+
+body.interior {
+    margin: 0 auto;
+    background-color: #FFFEFA;
+}
+
+.home-nav {
+    text-align: left;
+    list-style: none;
+    color: #8C3434;
+    font-size: 25px;
+    padding-top: 120px;
+    padding-right: 250px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .home-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.header {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-image {
+    height: 35px;
+}
+
+.header-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 16px;
+    color: #8C3434;
+}
+
+.header-nav li {
+    padding-bottom: 6px;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 300ms ease-in-out;
+}
+
+.header-nav li:hover,
+.header-nav li.active {
+    border-bottom: 3px solid rgba(140, 52, 52, 0.6);
+}
+
+.header-nav li + li {
+    margin-left: 90px;
+}
+
+@media (max-width: 768px) {
+    .header-nav li + li {
+        margin-left: 30px;
+    }
+}
+
+.about-section {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    padding-left: 30px;
+    font-size: 15px;
+    color: #8C3434;
+}
+
+.about-mail {
     border-bottom: 3px solid rgba(140, 52, 52, 0.6);
     padding-bottom: 6px;
 }
 
-.about-section {
-    max-width: 670px;
+.about-image {
+    margin-top: 30px;
+    max-width: 205px;
+}
+
+.gallery {
+    display: flex;
+    margin-top: 83px;
+    max-width: 589px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.about-section p {
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-    font-size: 15px;
-    
+.gallery-column {
+    width: 50%;
 }
 
-.about-section p:first-child {
-    margin-top: 100px;
+.gallery-column + .gallery-column {
+    margin-left: 10px;
 }
 
-.about-image {
-    max-width: 200px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-
+.gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 254px;
+    background-size: cover;
+    background-position: center center;
+    color: #ffff;
+    font-family: 'Crimson Pro';
+    font-style: italic;
 }
 
+.gallery-item:nth-child(1),
+.gallery-item:nth-child(2) {
+    margin-bottom: 10px;
+}
 
+.gallery-item-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.photo-album-page {
+    display: flex;
+    margin-top: 150px;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .photo-album-page {
+        flex-direction: column;
+    }
+}
+
+.photo-album-page + .photo-album-page {
+    margin-top: 0;
+}
+
+.photo-album-column {
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .photo-album-column {
+        width: 100%;
+    }
+}
+
+.photo-album-column:nth-child(2) {
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .photo-album-column:nth-child(2) {
+        margin-left: 0;
+    }
+}
+
+.photo-album img {
+    margin-bottom: 10px;
+}
