@@ -303,6 +303,11 @@ body.interior {
     color: #ffff;
     font-family: 'Crimson Pro';
     font-style: italic;
+    transition: transform 300ms ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(0.98)
 }
 
 .gallery-item:nth-child(1),
