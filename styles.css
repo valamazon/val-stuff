@@ -161,8 +161,10 @@ a {
 
 .home {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
     background-image: url(images/background.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -170,6 +172,7 @@ a {
     color: #FFFEFA;
     background-color: #8C3434;
     font-family: 'FreightSansLFPro';
+
 }
 
 body.interior {
@@ -182,8 +185,6 @@ body.interior {
     list-style: none;
     color: #8C3434;
     font-size: 25px;
-    padding-top: 120px;
-    padding-right: 250px;
     margin: 0;
 }
 
@@ -327,7 +328,7 @@ body.interior {
 .photo-album-page {
     display: flex;
     margin-top: 150px;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 @media (max-width: 768px) {
