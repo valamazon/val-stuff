@@ -143,8 +143,17 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Kabel';
+    src: url('fonts/Kabel-Light.woff2') format('woff2'),
+        url('fonts/Kabel-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
-    font-family: 'FreightSansLFPro Lig';
+    font-family: 'Kabel';
     padding: 0;
     margin: 0;
 }
@@ -160,9 +169,6 @@ a {
 }
 
 .home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     width: 100%;
     background-image: url(images/background.jpg);
@@ -171,7 +177,6 @@ a {
     background-size: cover;
     color: #FFFEFA;
     background-color: #8C3434;
-    font-family: 'FreightSansLFPro';
 
 }
 
@@ -206,8 +211,8 @@ body.interior {
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    justify-content: space-between;
-    padding-top: 45px;
+    justify-content: center;
+    padding-top: 50px;
 }
 
 @media (max-width: 768px) {
@@ -232,8 +237,9 @@ body.interior {
     align-items: center;
     justify-content: center;
     padding: 0;
-    font-size: 16px;
+    font-size: 20px;
     color: #8C3434;
+    margin: 0;
 }
 
 .header-nav li {
@@ -244,11 +250,11 @@ body.interior {
 
 .header-nav li:hover,
 .header-nav li.active {
-    border-bottom: 3px solid rgba(140, 52, 52, 0.6);
+    color: #D3ABAB
 }
 
 .header-nav li + li {
-    margin-left: 90px;
+    margin-left: 70px;
 }
 
 @media (max-width: 768px) {
@@ -258,18 +264,16 @@ body.interior {
 }
 
 .about-section {
-    max-width: 700px;
+    max-width: 474px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 120px;
-    padding-left: 30px;
     font-size: 15px;
     color: #8C3434;
 }
 
 .about-mail {
-    border-bottom: 3px solid rgba(140, 52, 52, 0.6);
-    padding-bottom: 6px;
+    color: #D3ABAB;
 }
 
 .about-image {
@@ -279,10 +283,8 @@ body.interior {
 
 .gallery {
     display: flex;
-    margin-top: 83px;
-    max-width: 589px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 50px;
+    padding: 0 10px;
 }
 
 .gallery-column {
@@ -294,15 +296,9 @@ body.interior {
 }
 
 .gallery-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     width: 100%;
-    height: 254px;
-    background-size: cover;
-    background-position: center center;
     color: #ffff;
-    font-family: 'Crimson Pro';
     font-style: italic;
     transition: transform 300ms ease-in-out;
 }
@@ -320,14 +316,28 @@ body.interior {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: 400;
+    font-size: 25px;
     margin: 0;
-    height: 100%;
-    width: 100%;
+    background-color: transparent;
+    color: #FFFEFA;
+    opacity: 0;
+}
+
+.gallery-item-text:hover {
+    background-color: #0000005c;
+    opacity: 1;
+    transition: all 400ms ease-in-out;
 }
 
 .photo-album-page {
     display: flex;
-    margin-top: 150px;
+    margin-top: 50px;
     padding: 0 10px;
 }
 
