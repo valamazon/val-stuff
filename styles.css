@@ -299,7 +299,6 @@ body.interior {
     position: relative;
     width: 100%;
     color: #ffff;
-    font-style: italic;
     transition: transform 300ms ease-in-out;
 }
 
