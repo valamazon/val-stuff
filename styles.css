@@ -390,7 +390,6 @@ body.interior {
     width: 50%;
     color: #ffff;
     transition: transform 300ms ease-in-out;
-    text-trans
 }
 
 @media (max-width: 768px) {
