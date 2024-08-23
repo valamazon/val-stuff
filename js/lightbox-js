@@ -1,0 +1,94 @@
+document.addEventListener('DOMContentLoaded', function() {
+// Get the lightbox elements
+var lightbox = document.getElementById('lightbox');
+var lightboxImg = document.getElementById('lightbox-img');
+var closeBtn = document.querySelector('.lightbox .close');
+var prevBtn = document.querySelector('.lightbox .prev');
+var nextBtn = document.querySelector('.lightbox .next');
+
+var currentIndex = 0;
+var images = Array.from(document.querySelectorAll('.photo-album img'));
+
+var startX = 0;
+var endX = 0;
+
+function showImage(index) {
+if (index < 0) index = images.length - 1;
+if (index >= images.length) index = 0;
+lightboxImg.src = images[index].src;
+lightboxImg.alt = images[index].alt;
+currentIndex = index;
+}
+
+// Add click event listener to each image
+images.forEach(function(img, index) {
+img.addEventListener('click', function() {
+    lightbox.style.display = 'flex'; // Change to flex to center image
+    document.body.classList.add('no-scroll'); // Prevent body scroll
+    showImage(index);
+});
+});
+
+// Close the lightbox when the close button is clicked
+closeBtn.addEventListener('click', function() {
+lightbox.style.display = 'none';
+document.body.classList.remove('no-scroll'); // Re-enable body scroll
+});
+
+// Close the lightbox when clicking outside of the image
+lightbox.addEventListener('click', function(event) {
+if (event.target === lightbox) {
+    lightbox.style.display = 'none';
+    document.body.classList.remove('no-scroll'); // Re-enable body scroll
+}
+});
+
+// Navigate to the previous image
+prevBtn.addEventListener('click', function() {
+showImage(currentIndex - 1);
+});
+
+// Navigate to the next image
+nextBtn.addEventListener('click', function() {
+showImage(currentIndex + 1);
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', function(event) {
+if (lightbox.style.display === 'flex') {
+    switch (event.key) {
+    case 'ArrowLeft':
+        showImage(currentIndex - 1);
+        break;
+    case 'ArrowRight':
+        showImage(currentIndex + 1);
+        break;
+    case 'Escape':
+        lightbox.style.display = 'none';
+        document.body.classList.remove('no-scroll'); // Re-enable body scroll
+        break;
+    }
+}
+});
+
+// Touch events for swipe navigation
+lightbox.addEventListener('touchstart', function(event) {
+startX = event.touches[0].clientX;
+});
+
+lightbox.addEventListener('touchmove', function(event) {
+endX = event.touches[0].clientX;
+});
+
+lightbox.addEventListener('touchend', function(event) {
+var deltaX = startX - endX;
+
+if (deltaX > 50) {
+    // Swipe left - show next image
+    showImage(currentIndex + 1);
+} else if (deltaX < -50) {
+    // Swipe right - show previous image
+    showImage(currentIndex - 1);
+}
+});
+});

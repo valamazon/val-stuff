@@ -23,8 +23,8 @@
         <li><a href="/">home</a></li>
         <li><a href="about.html">about</a></li>
         <li class="active"><a href="photos.html">photos</a></li>
-        <li><a href="prints.html">prints</a></li>
-        <li><a href="journal.html">journal</a></li>
+        <li><a href="coming-soon.html">prints</a></li>
+        <li><a href="coming-soon.html">journal</a></li>
       </ul>
     </header>
 
@@ -176,6 +176,17 @@
 
     </section>
 
+    <button id="scrollTopBtn" onclick="scrollToTop()"></button>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close"></span>
+      <span class="prev"></span>
+      <span class="next"></span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="js/lightbox-js"></script>
+    <script src="js/scroll-top.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
