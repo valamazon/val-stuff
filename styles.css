@@ -452,8 +452,8 @@ body.interior {
     overflow: hidden;
 }
 
-#playBtn, 
-#scrollTopBtn {
+#playAudioButton, 
+#scrollTopButton {
     position: fixed;
     bottom: 20px;
     width: 70px;
@@ -465,7 +465,7 @@ body.interior {
     background-color: transparent;
 }
 
-#scrollTopBtn {
+#scrollTopButton {
     right: 71px;
     bottom: 15px;
     background-color: transparent;
@@ -479,7 +479,7 @@ body.interior {
     outline: 0;
 }
 
-#playBtn {
+#playAudioButton {
     right: 20px;
     display: flex;
     align-items: center;
@@ -491,11 +491,11 @@ body.interior {
     outline: 0;
 }
 
-#playBtn.playing {
+#playAudioButton.playing {
     background-image: url(images/button-stop.svg);
 }
 
-#playBtn:hover, 
-#scrollTopBtn:hover {
+#playAudioButton:hover, 
+#scrollTopButton:hover {
     opacity: 1;
 }
