@@ -507,6 +507,15 @@ body.interior {
     outline: 0;
 }
 
+@media (max-width: 768px) {
+    #playAudioButton {
+        right: 0;
+    }
+    #scrollTopButton {
+        right: 50px;
+    }
+}
+
 #playAudioButton.playing {
     background-image: url(images/button-stop.webp);
 }
