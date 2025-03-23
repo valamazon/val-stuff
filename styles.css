@@ -233,7 +233,7 @@ body.interior {
     display: inline-block;
     height: 90px;
     width: 27px;
-    background-image: url('images/cinta.png');
+    background-image: url('images/tape.png');
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.7;
@@ -390,7 +390,7 @@ body.interior {
     cursor: pointer;
     height: 50px;
     width: 50px;
-    background-image: url(images/x.svg);
+    background-image: url(images/close-x.svg);
     background-position: center center;
   }
 
@@ -411,7 +411,7 @@ body.interior {
     font-size: 24px;
     transition: 0.3s;
     cursor: pointer;
-    background-image: url(images/arrow.svg);
+    background-image: url(images/carousel-arrow.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
