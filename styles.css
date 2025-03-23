@@ -590,6 +590,7 @@ body.interior {
 
 #scrollTopBtn {
     height: 52px;
+    outline: 0;
 }
 
 #playBtn {
@@ -601,6 +602,7 @@ body.interior {
     background-size: 100% 100%;
     border: 0;
     height: 53px;
+    outline: 0;
 }
 
 #playBtn.playing {
