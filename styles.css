@@ -603,26 +603,10 @@ body.interior {
     height: 53px;
 }
 
-/* When in "pause" state, show pause icon */
 #playBtn.playing {
     background-image: url(images/button-stop.svg);
 }
 
-/* Creating the two pause bars */
-#playBtn.playing::before {
-    content: "";
-    display: flex;
-}
-
-#playBtn.playing::after {
-    content: "";
-    width: 6px;
-    height: 20px;
-    background: white;
-    margin-left: 4px;
-}
-
-/* Scroll-to-top button (Appears only when scrolling, placed to the left of playBtn) */
 #scrollTopBtn {
     right: 100px;
     background-color: transparent;
@@ -634,7 +618,7 @@ body.interior {
     border: 0;
 }
 
-/* Button hover effect */
-#playBtn:hover, #scrollTopBtn:hover {
+#playBtn:hover, 
+#scrollTopBtn:hover {
     opacity: 1;
 }
