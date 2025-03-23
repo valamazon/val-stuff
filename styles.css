@@ -484,15 +484,15 @@ body.interior {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(images/button-play.svg);
-    background-size: 100% 100%;
+    background-image: url(images/button-play.webp);
+    background-size: contain;
     border: 0;
     height: 33px;
     outline: 0;
 }
 
 #playAudioButton.playing {
-    background-image: url(images/button-stop.svg);
+    background-image: url(images/button-stop.webp);
 }
 
 #playAudioButton:hover, 
