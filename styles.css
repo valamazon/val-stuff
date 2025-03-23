@@ -1,148 +1,3 @@
-
-@font-face {
-    font-family: 'FreightSansLFPro';
-    src: url('fonts/FreightSansLFPro-BoldIt.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-BoldIt.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FreightSansLFPro';
-    src: url('fonts/FreightSansLFPro-BoldIt.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-BoldIt.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FreightSansLFPro';
-    src: url('fonts/FreightSansLFPro-Bold.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FreightSansLFPro';
-    src: url('fonts/FreightSansLFPro-It.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-It.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FreightSansLFPro';
-    src: url('fonts/FreightSansLFPro-Bold.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FreightSansLFPro';
-    src: url('fonts/FreightSansLFPro-Regular.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FreightSansLFPro';
-    src: url('fonts/FreightSansLFPro-Regular.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FreightSansLFPro Lig';
-    src: url('fonts/FreightSansLFPro-LightIt.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-LightIt.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FreightSansLFPro';
-    src: url('fonts/FreightSansLFPro-It.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-It.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Freight';
-    src: url('fonts/Freight-SansMediumItalic.woff2') format('woff2'),
-        url('fonts/Freight-SansMediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FreightSansLFPro Lig';
-    src: url('fonts/FreightSansLFPro-LightIt.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-LightIt.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FreightSansLFPro Lig';
-    src: url('fonts/FreightSansLFPro-Light.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FreightSansLFPro Lig';
-    src: url('fonts/FreightSansLFPro-Light.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Freight';
-    src: url('fonts/Freight-SansMediumItalic.woff2') format('woff2'),
-        url('fonts/Freight-SansMediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FreightSansLFPro Med';
-    src: url('fonts/FreightSansLFPro-Medium.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FreightSansLFPro Med';
-    src: url('fonts/FreightSansLFPro-Medium.woff2') format('woff2'),
-        url('fonts/FreightSansLFPro-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
 @font-face {
     font-family: 'Kabel';
     src: url('fonts/Kabel-Light.woff2') format('woff2'),
@@ -150,6 +5,15 @@
     font-weight: 300;
     font-style: normal;
     font-display: swap;
+}
+
+:root {
+    --color-primary: var(--color-primary);
+    --color-primary-transparent: #8c343495;
+    --color-primary-more-transparent: #8c3434b0;
+    --color-background: #FFFEFA;
+    --color-accent: #D3ABAB;
+    --color-white: #FFFFFF;
 }
 
 body {
@@ -176,14 +40,14 @@ a {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color: #FFFEFA;
-    background-color: #8C3434;
+    color: var(--color-background);
+    background-color: var(--color-primary);
 
 }
 
 body.interior {
     margin: 0 auto;
-    background-color: #FFFEFA;
+    background-color: var(--color-background);
 }
 
 @media (max-width: 768px) {
@@ -231,7 +95,7 @@ body.interior {
     justify-content: center;
     padding: 0;
     font-size: 20px;
-    color: #8C3434;
+    color: var(--color-primary);
     margin: 0;
 }
 
@@ -239,11 +103,14 @@ body.interior {
     padding-bottom: 6px;
     border-bottom: 3px solid transparent;
     transition: border-bottom 300ms ease-in-out;
+    padding: 0 10px;
 }
 
 .header-nav li:hover, 
 .header-nav li.active {
-    color: #D3ABAB;
+    color: var(--color-white);
+    background-color: var(--color-primary-transparent);
+    transition: all 300ms ease-in-out;
 }
 
 .header-nav li + li {
@@ -265,13 +132,21 @@ body.interior {
     flex-direction: column;
 }
 
+.home .header-nav li{
+    padding: 2px 10px 0 10px;
+    transition: all 300ms ease-in-out;
+}
+
 .home .header-nav li + li {
     margin-left: 0;
+    margin-top: 10px;
 }
 
 .home .header-nav li:hover,
 .home .header-nav li.active {
-    color: white;
+    color: var(--color-white);
+    background-color: var(--color-primary-more-transparen);
+    transition: all 300ms ease-in-out;
 }
 
 .social-nav {
@@ -313,7 +188,7 @@ body.interior {
 
 .social-nav-icon:hover path {
     cursor: pointer;
-    stroke: #ffffff;
+    stroke: var(--color-white);
 }
 
 .social-nav-icon.social-nav-icon-behance {
@@ -332,7 +207,7 @@ body.interior {
     padding: 0 20px;
     margin-top: 120px;
     font-size: 15px;
-    color: #8C3434;
+    color: var(--color-primary);
 }
 
 @media (max-width: 768px) {
@@ -342,7 +217,8 @@ body.interior {
 }
 
 .about-mail {
-    color: #D3ABAB;
+    color: var(--color-accent);
+    text-decoration: underline;
 }
 
 .about-image-wrapper {
@@ -432,7 +308,7 @@ body.interior {
     font-size: 25px;
     margin: 0;
     background-color: transparent;
-    color: #FFFEFA;
+    color: var(--color-background);
     opacity: 0;
 }
 
@@ -576,7 +452,8 @@ body.interior {
     overflow: hidden;
 }
 
-#playBtn, #scrollTopBtn {
+#playBtn, 
+#scrollTopBtn {
     position: fixed;
     bottom: 20px;
     width: 70px;
@@ -589,7 +466,16 @@ body.interior {
 }
 
 #scrollTopBtn {
-    height: 52px;
+    right: 71px;
+    bottom: 15px;
+    background-color: transparent;
+    background-image: url(images/aprils-camera.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+    border: 0;
+    height: 45px;
     outline: 0;
 }
 
@@ -601,23 +487,12 @@ body.interior {
     background-image: url(images/button-play.svg);
     background-size: 100% 100%;
     border: 0;
-    height: 53px;
+    height: 33px;
     outline: 0;
 }
 
 #playBtn.playing {
     background-image: url(images/button-stop.svg);
-}
-
-#scrollTopBtn {
-    right: 100px;
-    background-color: transparent;
-    background-image: url(images/aprils-camera.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    display: none;
-    border: 0;
 }
 
 #playBtn:hover, 
