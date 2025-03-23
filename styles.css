@@ -473,10 +473,18 @@ body.interior {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    display: none;
     border: 0;
     height: 45px;
     outline: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+#scrollTopButton.show {
+    opacity: 0.8;
+    visibility: visible;
+    transition: opacity 0.3s ease;
 }
 
 #playAudioButton {

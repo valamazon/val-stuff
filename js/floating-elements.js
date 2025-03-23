@@ -18,7 +18,12 @@ if (audioFile) {
 
     // Show the scroll button only when scrolled down
     window.onscroll = () => {
-        scrollTopButton.style.display = (document.documentElement.scrollTop > window.innerHeight) ? "block" : "none";
+        const scrollPosition = document.documentElement.scrollTop;
+        if (scrollPosition > window.innerHeight) {
+            scrollTopButton.classList.add("show"); // Fade in by adding the class
+        } else {
+            scrollTopButton.classList.remove("show"); // Fade out by removing the class
+        }
     };
 
     // Function to smoothly scroll to the top
