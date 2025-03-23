@@ -318,6 +318,14 @@ body.interior {
     transition: all 400ms ease-in-out;
 }
 
+@media (max-width: 768px) {
+    .gallery-item-text {
+        background-color: #00000061;
+        opacity: 1;
+        transition: all 400ms ease-in-out;
+    } 
+}
+
 .photo-album-page {
     display: flex;
     margin-top: 50px;
