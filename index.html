@@ -1,60 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">    
-  <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon//favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png">
-    <link rel="manifest" href="images/favicon//site.webmanifest">
-    <link rel="mask-icon" href="images/favicon//safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <meta charset="UTF-8">
-    <title>valstuff</title>
-    <meta name="description" content="valstuff">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" referrerpolicy="no-referrer" />
-    <link href="styles.css" rel="stylesheet" />   
-  </head>
-  
-  <body class="home animate__animated animate__fadeIn">
-    <header class="header">
-      <ul class="header-nav">
-        <li class="active"><a href="/">home</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="photos.html">photos</a></li>
-        <li><a href="https://valstuff.mitiendanube.com/" target="_blank">prints</a></li>
-      </ul>
-    </header>
+<html lang="en">
 
-    <ul class="social-nav">
-      <li class="social-nav-icon social-nav-icon-mail">
-        <a href="mailto:valelamazon@gmail.com">
-          <svg class="test" width="31" height="27" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M1 21.8333V5.16667C1 2.86548 2.86548 1 5.16667 1H26C28.3012 1 30.1667 2.86548 30.1667 5.16667V21.8333C30.1667 24.1345 28.3012 26 26 26H5.16667C2.86548 26 1 24.1345 1 21.8333Z" stroke="#8C3434" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M5.16669 8.29166L15.5834 14.5417L26 8.29166" stroke="#8C3434" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>    
-        </a>      
-      </li>
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png">
+  <link rel="manifest" href="images/favicon//site.webmanifest">
+  <link rel="mask-icon" href="images/favicon//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8">
+  <title>valstuff</title>
+  <meta name="description" content="valstuff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    referrerpolicy="no-referrer" />
+  <link href="styles.css" rel="stylesheet" />
+</head>
 
-      <li class="social-nav-icon social-nav-icon-instagram">
-        <a href="https://www.instagram.com/val.lamazon/" target="_blank">
-          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 21.2222C18.4364 21.2222 21.2222 18.4364 21.2222 15C21.2222 11.5636 18.4364 8.7778 15 8.7778C11.5636 8.7778 8.7778 11.5636 8.7778 15C8.7778 18.4364 11.5636 21.2222 15 21.2222Z" stroke="#8C3434" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M1 21.2222V8.77778C1 4.48224 4.48224 1 8.77778 1H21.2222C25.5177 1 29 4.48224 29 8.77778V21.2222C29 25.5177 25.5177 29 21.2222 29H8.77778C4.48224 29 1 25.5177 1 21.2222Z" stroke="#8C3434"/>
-            <path d="M23.5555 6.45993L23.571 6.44272" stroke="#8C3434" stroke-linecap="round" stroke-linejoin="round"/>0
-          </svg>
-        </a>          
-      </li>
-
-      <li class="social-nav-icon social-nav-icon-behance">
-        <a href="https://www.behance.net/valamazon" target="_blank">
-          <svg width="40" height="27" viewBox="0 0 40 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.9177 12.9565C22.6685 12.9565 22.6685 26 12.9177 26C7.41733 26 1 26 1 26V12.9565M12.9177 12.9565C7.41733 12.9565 1 12.9565 1 12.9565M12.9177 12.9565C22.6685 12.9565 22.6685 1.00002 12.9177 1C8.58396 1 1 1 1 1V12.9565" stroke="#8C3434" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M31.7692 8.69232C27.5209 8.69232 24.0769 12.5667 24.0769 17.3462H39.4615C39.4615 12.5667 36.0175 8.69232 31.7692 8.69232Z" stroke="#8C3434" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M24.0769 17.3462C24.0769 22.1256 27.5209 26 31.7692 26C37.0677 26 38.5 22.1539 38.5 22.1539" stroke="#8C3434" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M36.5769 2.92307H26.9615" stroke="#8C3434" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </li>
+<body class="home animate__animated animate__fadeIn">
+  <header class="header">
+    <ul class="header-nav">
+      <li class="active"><a href="/">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="photos.html">photos</a></li>
+      <li><a href="https://valstuff.mitiendanube.com/" target="_blank">prints</a></li>
     </ul>
-  </body>
+  </header>
+
+  <ul class="social-nav">
+    <li class="social-nav-icon social-nav-icon-mail">
+      <a href="mailto:valelamazon@gmail.com">
+        <svg class="test" width="31" height="27" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M1 21.8333V5.16667C1 2.86548 2.86548 1 5.16667 1H26C28.3012 1 30.1667 2.86548 30.1667 5.16667V21.8333C30.1667 24.1345 28.3012 26 26 26H5.16667C2.86548 26 1 24.1345 1 21.8333Z"
+            stroke="#8C3434" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M5.16669 8.29166L15.5834 14.5417L26 8.29166" stroke="#8C3434" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </li>
+
+    <li class="social-nav-icon social-nav-icon-instagram">
+      <a href="https://www.instagram.com/val.lamazon/" target="_blank">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15 21.2222C18.4364 21.2222 21.2222 18.4364 21.2222 15C21.2222 11.5636 18.4364 8.7778 15 8.7778C11.5636 8.7778 8.7778 11.5636 8.7778 15C8.7778 18.4364 11.5636 21.2222 15 21.2222Z"
+            stroke="#8C3434" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M1 21.2222V8.77778C1 4.48224 4.48224 1 8.77778 1H21.2222C25.5177 1 29 4.48224 29 8.77778V21.2222C29 25.5177 25.5177 29 21.2222 29H8.77778C4.48224 29 1 25.5177 1 21.2222Z"
+            stroke="#8C3434" />
+          <path d="M23.5555 6.45993L23.571 6.44272" stroke="#8C3434" stroke-linecap="round" stroke-linejoin="round" />0
+        </svg>
+      </a>
+    </li>
+
+    <li class="social-nav-icon social-nav-icon-substack">
+      <a href="https://substack.com/@valamazon" target="_blank">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M40.0248 10.0817V5.50031C39.7019 5.50031 39.2837 5.49991 38.3695 5.49991L9.40261 5.50031C8.48841 5.50031 8.08461 5.50031 7.74731 5.50031V10.0817C7.96371 10.0817 8.48841 10.0822 9.40261 10.0822L38.3695 10.0817C39.2837 10.0817 39.7817 10.0817 40.0248 10.0817Z"
+            stroke="#8C3434"
+            stroke-width="1.30"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M40.0248 18.3503V13.7689H9.40249C8.48829 13.7689 8.02479 13.7689 7.74719 13.7689V18.3503C8.01179 18.3503 8.48829 18.3503 9.40249 18.3503H40.0248Z"
+            stroke="#8C3434"
+            stroke-width="1.30"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M40.2557 42.4999V22.3178C40.2557 22.1545 39.2833 22.2101 38.3691 22.2101H9.40219C8.48799 22.2101 7.74689 22.1546 7.74689 22.3178V42.2056C8.02829 42.0434 23.0884 33.9938 23.916 33.6078C24.4316 33.905 37.5621 40.9463 40.2566 42.4992L40.2557 42.4999Z"
+            stroke="#8C3434"
+            stroke-width="1.30"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</body>

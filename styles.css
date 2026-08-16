@@ -179,7 +179,9 @@ body.interior {
 }
 
 .social-nav-icon svg {
+    width: 100%;
     height: 100%;
+    display: block;
 }
 
 .social-nav-icon:hover {
@@ -191,9 +193,9 @@ body.interior {
     stroke: var(--color-white);
 }
 
-.social-nav-icon.social-nav-icon-behance {
-    width: 38px;
-    background-position-y: 3px;
+.social-nav-icon.social-nav-icon-substack {
+    width: 24px;
+    height: 24px;
 }
 
 .social-nav-icon + .social-nav-icon {
