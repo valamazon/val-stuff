@@ -198,15 +198,13 @@ body.interior {
 }
 
 .about-section {
-    max-width: 500px;
+    max-width: 561px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 20px;
     margin-top: 50px;
-    padding-left: 98px;
     padding-bottom: 50px;
     font-size: 20px;
-    color: var(--color-primary);
+    color: var(--color-primary);    
 }
 
 @media (max-width: 768px) {
@@ -480,7 +478,6 @@ body.interior {
     overflow: hidden;
 }
 
-#playAudioButton, 
 #scrollTopButton {
     position: fixed;
     bottom: 20px;
@@ -515,32 +512,12 @@ body.interior {
     transition: opacity 0.3s ease;
 }
 
-#playAudioButton {
-    right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url(images/button-play.webp);
-    background-size: contain;
-    border: 0;
-    height: 33px;
-    outline: 0;
-}
-
 @media (max-width: 768px) {
-    #playAudioButton {
-        right: 0;
-    }
     #scrollTopButton {
         right: 50px;
     }
 }
 
-#playAudioButton.playing {
-    background-image: url(images/button-stop.webp);
-}
-
-#playAudioButton:hover, 
 #scrollTopButton:hover {
     opacity: 1;
 }
