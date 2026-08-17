@@ -265,6 +265,7 @@ body.interior {
 
 .about-list-title {
     font-weight: normal;
+    font-size: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -272,6 +273,7 @@ body.interior {
 .about-list {
     padding: 0;
     list-style: none;
+    line-height: 23px;
 }
 
 .gallery {
