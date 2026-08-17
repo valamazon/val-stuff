@@ -198,24 +198,34 @@ body.interior {
 }
 
 .about-section {
-    max-width: 474px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
     margin-top: 50px;
-    font-size: 15px;
+    padding-left: 98px;
+    padding-bottom: 50px;
+    font-size: 20px;
     color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding-left: 33px;
+    }
+}
+
+.about-section a {
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 3px;
+  text-decoration-style: solid;
 }
 
 @media (max-width: 768px) {
     .about-section {
         max-width: 314px;
     }
-}
-
-.about-mail {
-    color: var(--color-accent);
-    text-decoration: underline;
 }
 
 .about-image-wrapper {
@@ -251,6 +261,17 @@ body.interior {
 .about-image {
     margin-top: 18px;
     max-width: 205px;
+}
+
+.about-list-title {
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about-list {
+    padding: 0;
+    list-style: none;
 }
 
 .gallery {
