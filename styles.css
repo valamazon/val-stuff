@@ -118,8 +118,18 @@ body.interior {
 }
 
 @media (max-width: 768px) {
+    .interior .header-nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .header-nav li {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
     .header-nav li + li {
-        margin-left: 30px;
+        margin-left: 0;
     }
 }
 
