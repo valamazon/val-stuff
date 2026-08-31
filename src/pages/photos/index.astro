@@ -1,0 +1,10 @@
+---
+import GalleryIndex from "../../components/GalleryIndex.astro";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { galleries } from "../../data/galleries";
+---
+
+<SiteLayout title="Photos" active="photos">
+  <h1 class="visually-hidden">Photo series</h1>
+  <GalleryIndex galleries={galleries.filter((gallery) => gallery.type === "photos")} />
+</SiteLayout>

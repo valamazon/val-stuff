@@ -1,0 +1,55 @@
+---
+import "../styles/page-entrance.css";
+---
+
+<div class="page-loader" role="status" aria-label="Loading page images">
+  <span class="page-loader-spinner"></span>
+</div>
+
+<script>
+  const nextFrame = () => new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
+
+  const waitForImage = async (image: HTMLImageElement) => {
+    if (!image.complete) {
+      await new Promise<void>((resolve) => {
+        image.addEventListener("load", () => resolve(), { once: true });
+        image.addEventListener("error", () => resolve(), { once: true });
+      });
+    }
+
+    await image.decode().catch(() => undefined);
+  };
+
+  const revealPage = async () => {
+    const body = document.body;
+    const images = Array.from(document.querySelectorAll<HTMLImageElement>('main img[loading="eager"]'));
+    const hasPendingImages = images.some((image) => !image.complete);
+
+    body.classList.remove("page-enter-ready", "page-images-loading");
+    body.classList.add("page-enter-pending");
+
+    if (hasPendingImages) body.classList.add("page-images-loading");
+
+    await Promise.race([
+      Promise.all(images.map(waitForImage)),
+      new Promise<void>((resolve) => window.setTimeout(resolve, 4000)),
+    ]);
+
+    await nextFrame();
+    await nextFrame();
+    body.classList.remove("page-enter-pending", "page-images-loading");
+    body.classList.add("page-enter-ready");
+  };
+
+  document.addEventListener("astro:page-load", revealPage);
+</script>
+
+<noscript>
+  <style>
+    .page-enter-pending main,
+    .page-enter-pending.home .header-nav li {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</noscript>

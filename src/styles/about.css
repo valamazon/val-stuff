@@ -1,0 +1,72 @@
+.about-section {
+  max-width: 561px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 20px;
+}
+
+.about-section a {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: .5px;
+  text-underline-offset: 3px;
+}
+
+.about-image-wrapper {
+  position: relative;
+  max-width: 205px;
+}
+
+.about-image-wrapper::before,
+.about-image-wrapper::after {
+  position: absolute;
+  z-index: 1;
+  width: 27px;
+  height: 90px;
+  content: "";
+  background-image: url("/images/tape.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: .7;
+}
+
+.about-image-wrapper::before {
+  top: 24px;
+  left: -13px;
+}
+
+.about-image-wrapper::after {
+  right: -13px;
+  bottom: 29px;
+  transform: rotate(356deg);
+}
+
+.about-image {
+  width: 205px;
+  height: auto;
+  margin-top: 18px;
+}
+
+.about-list-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.about-list {
+  padding: 0;
+  margin: 0;
+  line-height: 23px;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    max-width: 314px;
+    padding-left: 33px;
+  }
+}

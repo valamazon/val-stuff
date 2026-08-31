@@ -1,0 +1,33 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { Image } from "astro:assets";
+import profileImage from "../assets/images/profile-picture.jpg";
+import "../styles/about.css";
+---
+
+<SiteLayout title="About" active="about" image={profileImage} imageAlt="Portrait of Val">
+  <section class="about-section">
+    <h1 class="visually-hidden">About Val</h1>
+    <p>hi there, val here.<br /> i'm a photographer and writer from Córdoba, Argentina.<br /> i'm passionate about analog photography.<br /> hope you enjoy my content.</p>
+    <p>feel free to <a href="mailto:valelamazon@gmail.com">contact me</a>.</p>
+    <div class="about-image-wrapper">
+      <Image
+        class="about-image"
+        src={profileImage}
+        alt="Portrait of Val"
+        widths={[205, 410]}
+        sizes="205px"
+        loading="eager"
+      />
+    </div>
+    <h2 class="about-list-title">exhibitions</h2>
+    <ul class="about-list">
+      <li>2026, Arequipa, Perú, <a target="_blank" rel="noreferrer" href="https://www.instagram.com/p/DbotjdhoDN8/?img_index=2">Centro Cultural Casa Blanca</a></li>
+      <li>2025, Arequipa, Perú, <a target="_blank" rel="noreferrer" href="https://www.instagram.com/p/DRoK_hYjYW9/?img_index=10">Centro Cultural Casa Blanca</a></li>
+      <li>2025, Córdoba, Argentina, <a target="_blank" rel="noreferrer" href="https://www.instagram.com/p/DP_xHUYjGUm/">Galería Botellón</a></li>
+      <li>2025, Córdoba, Argentina, <a target="_blank" rel="noreferrer" href="https://www.instagram.com/p/DLSnLZSxuyI/?img_index=1">Museo Provincial de Fotografía Palacio Dionisi</a></li>
+    </ul>
+    <h2 class="about-list-title">publications</h2>
+    <ul class="about-list"><li>2026, zine, <a target="_blank" rel="noreferrer" href="https://www.instagram.com/p/Das3fUVu6Je/"><em>aún guardo las flores</em></a></li></ul>
+  </section>
+</SiteLayout>

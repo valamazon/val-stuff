@@ -1,0 +1,30 @@
+.social-nav {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  display: flex;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.social-nav li,
+.social-nav a,
+.social-nav img {
+  display: block;
+  width: 27px;
+  height: 27px;
+}
+
+.social-nav a:hover img {
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+  .social-nav {
+    right: 0;
+    left: 0;
+    justify-content: center;
+  }
+}

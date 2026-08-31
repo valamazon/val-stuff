@@ -1,0 +1,349 @@
+[
+  {
+    "slug": "lets-be-still",
+    "title": "let's be still",
+    "type": "photos",
+    "cover": "photos/lets-be-still/lets-be-still-3.webp",
+    "sections": [
+      {
+        "columns": [
+          [
+            { "src": "photos/lets-be-still/lets-be-still-1.webp" },
+            { "src": "photos/lets-be-still/lets-be-still-3.webp" },
+            { "src": "photos/lets-be-still/lets-be-still-15.webp" }
+          ],
+          [
+            { "src": "photos/lets-be-still/lets-be-still-2.webp" },
+            { "src": "photos/lets-be-still/lets-be-still-4.webp" }
+          ]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "photos/lets-be-still/lets-be-still-5.webp" }],
+          [{ "src": "photos/lets-be-still/lets-be-still-16.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "photos/lets-be-still/lets-be-still-8.webp" }],
+          []
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "photos/lets-be-still/lets-be-still-10.webp" }],
+          [
+            { "src": "photos/lets-be-still/lets-be-still-6.webp" },
+            { "src": "photos/lets-be-still/lets-be-still-7.webp" },
+            { "src": "photos/lets-be-still/lets-be-still-17.webp" }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "sur",
+    "title": "sur",
+    "type": "photos",
+    "cover": "photos/sur/sur-2.webp",
+    "sections": [
+      { "columns": [[{ "src": "photos/sur/sur-1.webp" }]] },
+      { "columns": [[{ "src": "photos/sur/sur-2.webp" }]] },
+      {
+        "columns": [
+          [{ "src": "photos/sur/sur-3.webp" }],
+          []
+        ]
+      },
+      {
+        "columns": [
+          [],
+          [
+            { "src": "photos/sur/sur-4.webp" },
+            { "src": "photos/sur/sur-5.webp" }
+          ]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "photos/sur/sur-6.webp" }],
+          [{ "src": "photos/sur/sur-7.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [],
+          [{ "src": "photos/sur/sur-8.webp" }]
+        ]
+      },
+      { "columns": [[{ "src": "photos/sur/sur-9.webp" }]] }
+    ]
+  },
+  {
+    "slug": "autumn-leaves",
+    "title": "autumn leaves",
+    "type": "photos",
+    "cover": "photos/autumn-leaves/autumn-leaves-8.webp",
+    "sections": [
+      {
+        "columns": [
+          [{ "src": "photos/autumn-leaves/autumn-leaves-1.webp" }],
+          [
+            { "src": "photos/autumn-leaves/autumn-leaves-2.webp" },
+            { "src": "photos/autumn-leaves/autumn-leaves-3.webp" }
+          ]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "photos/autumn-leaves/autumn-leaves-4.webp" }],
+          [{ "src": "photos/autumn-leaves/autumn-leaves-5.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [],
+          [{ "src": "photos/autumn-leaves/autumn-leaves-6.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "photos/autumn-leaves/autumn-leaves-7.webp" }],
+          []
+        ]
+      },
+      { "columns": [[{ "src": "photos/autumn-leaves/autumn-leaves-8.webp" }]] }
+    ]
+  },
+  {
+    "slug": "to-nyc-with-love",
+    "title": "to nyc with love",
+    "type": "photos",
+    "cover": "photos/to-nyc-with-love/nyc-15.webp",
+    "sections": [
+      {
+        "columns": [
+          [{ "src": "photos/to-nyc-with-love/nyc-1.webp" }],
+          [{ "src": "photos/to-nyc-with-love/nyc-2.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "photos/to-nyc-with-love/nyc-4.webp" }],
+          []
+        ]
+      },
+      {
+        "columns": [
+          [],
+          [
+            { "src": "photos/to-nyc-with-love/nyc-5.webp" },
+            { "src": "photos/to-nyc-with-love/nyc-10.webp" }
+          ]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "photos/to-nyc-with-love/nyc-9.webp" }],
+          []
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "photos/to-nyc-with-love/nyc-7.webp" }],
+          [{ "src": "photos/to-nyc-with-love/nyc-6.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "photos/to-nyc-with-love/nyc-11.webp" }],
+          [{ "src": "photos/to-nyc-with-love/nyc-12.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [],
+          [{ "src": "photos/to-nyc-with-love/nyc-13.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "photos/to-nyc-with-love/nyc-14.webp" }],
+          [{ "src": "photos/to-nyc-with-love/nyc-15.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [
+            { "src": "photos/to-nyc-with-love/nyc-16.webp" },
+            { "src": "photos/to-nyc-with-love/nyc-17.webp" }
+          ],
+          []
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "borrador",
+    "title": "borrador",
+    "type": "projects",
+    "cover": "projects/borrador/13.webp",
+    "sections": [
+      {
+        "columns": [
+          [{ "src": "projects/borrador/1.webp" }],
+          [{ "src": "projects/borrador/2.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/borrador/3.webp" }],
+          []
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/borrador/4.webp" }],
+          [{ "src": "projects/borrador/5.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [],
+          [{ "src": "projects/borrador/6.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/borrador/7.webp" }],
+          [{ "src": "projects/borrador/8.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [],
+          [{ "src": "projects/borrador/9.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/borrador/10.webp" }],
+          []
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/borrador/11.webp" }],
+          []
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/borrador/12.webp" }],
+          []
+        ]
+      },
+      {
+        "columns": [
+          [],
+          [{ "src": "projects/borrador/13.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/borrador/14.webp" }],
+          [{ "src": "projects/borrador/15.webp" }]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "zumaia",
+    "title": "zumaia",
+    "type": "projects",
+    "cover": "projects/zumaia/4.webp",
+    "sections": [
+      {
+        "columns": [
+          [{ "src": "projects/zumaia/1.webp" }],
+          [{ "src": "projects/zumaia/2.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/zumaia/3.webp" }],
+          []
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/zumaia/4.webp" }],
+          []
+        ]
+      },
+      {
+        "columns": [
+          [],
+          [{ "src": "projects/zumaia/5.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [],
+          [{ "src": "projects/zumaia/6.webp" }]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "aun-guardo-las-flores",
+    "title": "aún guardo las flores",
+    "type": "projects",
+    "cover": "projects/aun-guardo-las-flores/6.webp",
+    "sections": [
+      {
+        "columns": [
+          [{ "src": "projects/aun-guardo-las-flores/1.webp" }],
+          []
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/aun-guardo-las-flores/2.webp" }],
+          [{ "src": "projects/aun-guardo-las-flores/3.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [],
+          [{ "src": "projects/aun-guardo-las-flores/4.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/aun-guardo-las-flores/5.webp" }],
+          [{ "src": "projects/aun-guardo-las-flores/6.webp" }]
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/aun-guardo-las-flores/7.webp" }],
+          []
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/aun-guardo-las-flores/8.webp" }],
+          []
+        ]
+      },
+      {
+        "columns": [
+          [{ "src": "projects/aun-guardo-las-flores/9.webp" }],
+          []
+        ]
+      }
+    ]
+  }
+]

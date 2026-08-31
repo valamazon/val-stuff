@@ -1,0 +1,31 @@
+---
+import "../styles/header.css";
+
+interface Props {
+  home?: boolean;
+  active?: "home" | "about" | "photos" | "projects";
+}
+
+const { home = false, active } = Astro.props;
+const links = [
+  { label: "home", href: "/", id: "home" },
+  { label: "about", href: "/about/", id: "about" },
+  { label: "photos", href: "/photos/", id: "photos" },
+  { label: "projects", href: "/projects/", id: "projects" },
+] as const;
+---
+
+<header class:list={["header", { "header--home": home }]}>
+  <nav aria-label="Main navigation">
+    <ul class="header-nav">
+      {links.map((link) => (
+        <li class:list={{ active: active === link.id }}>
+          <a href={link.href} aria-current={active === link.id ? "page" : undefined}>{link.label}</a>
+        </li>
+      ))}
+      <li>
+        <a href="https://valstuff.mitiendanube.com/" target="_blank" rel="noreferrer">prints<span class="visually-hidden"> (opens in a new tab)</span></a>
+      </li>
+    </ul>
+  </nav>
+</header>

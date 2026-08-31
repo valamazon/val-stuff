@@ -1,0 +1,36 @@
+---
+import type { Gallery } from "../data/galleries";
+import { getImage } from "astro:assets";
+import "../styles/gallery-index.css";
+
+interface Props {
+  galleries: Gallery[];
+}
+
+const { galleries } = Astro.props;
+const coverImages = await Promise.all(galleries.map((gallery) => getImage({
+  src: gallery.cover,
+  width: 1280,
+  format: "webp",
+  quality: 80,
+})));
+---
+
+<ul class="gallery-index">
+  {galleries.map((gallery, index) => (
+    <li class="gallery-card">
+      <img
+        src={coverImages[index].src}
+        alt=""
+        width={gallery.cover.width}
+        height={gallery.cover.height}
+        loading="eager"
+        decoding="sync"
+        fetchpriority="high"
+      />
+      <a href={`/${gallery.type}/${gallery.slug}/`}>
+        <span>{gallery.title}</span>
+      </a>
+    </li>
+  ))}
+</ul>

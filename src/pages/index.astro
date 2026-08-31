@@ -1,0 +1,10 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+import homeBackground from "../assets/images/home-background.webp";
+---
+
+<SiteLayout title="Home" active="home" home image={homeBackground}>
+  <h1 class="visually-hidden">valstuff — photography and writing by Val Lamazon</h1>
+  <SocialLinks />
+</SiteLayout>

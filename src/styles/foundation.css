@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Kabel";
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+  src: url("/fonts/Kabel-Light.woff2") format("woff2"),
+    url("/fonts/Kabel-Light.woff") format("woff");
+}
+
+:root {
+  --color-primary: #8c3434;
+  --color-primary-transparent: #8c343495;
+  --color-primary-more-transparent: #8c3434b0;
+  --color-background: #fffefa;
+  --color-white: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::view-transition-group(*),
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation: none !important;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Kabel", sans-serif;
+  font-weight: 300;
+  font-synthesis: none;
+  color: var(--color-primary);
+  background-color: var(--color-background);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}

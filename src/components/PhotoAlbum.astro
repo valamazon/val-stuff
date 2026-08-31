@@ -1,0 +1,132 @@
+---
+import type { Gallery } from "../data/galleries";
+import { Image } from "astro:assets";
+import "../styles/photo-album.css";
+
+interface Props {
+  gallery: Gallery;
+}
+
+const { gallery } = Astro.props;
+let imageIndex = 0;
+---
+
+<h1 class="visually-hidden">{gallery.title}</h1>
+<div class="photo-album" data-album>
+  {gallery.sections.map((section, sectionIndex) => (
+    <div class:list={["photo-album-page", { "photo-album-page--full": section.columns.length === 1 }]}>
+      {section.columns.map((column, columnIndex) => (
+        <div class="photo-album-column">
+          {column.map((image, imagePosition) => {
+            const index = imageIndex++;
+            const isAboveFold = sectionIndex === 0 && imagePosition === 0 && columnIndex < 2;
+            const isFullWidth = section.columns.length === 1;
+
+            return (
+              <button class="album-image reveal" type="button" data-image-index={index} aria-label={`Open ${image.alt}`}>
+                <Image
+                  src={image.asset}
+                  alt={image.alt}
+                  loading={isAboveFold ? "eager" : "lazy"}
+                  widths={[640, 960, 1280, 1600, 1920]}
+                  sizes={isFullWidth ? "100vw" : "(max-width: 768px) 100vw, 50vw"}
+                  format="webp"
+                  quality={82}
+                />
+              </button>
+            );
+          })}
+        </div>
+      ))}
+    </div>
+  ))}
+</div>
+
+<button class="scroll-top" type="button" aria-label="Back to top"></button>
+
+<dialog class="lightbox" aria-label={`${gallery.title} image viewer`}>
+  <button class="lightbox-close" type="button" aria-label="Close image viewer"></button>
+  <button class="lightbox-previous" type="button" aria-label="Previous image"></button>
+  <img class="lightbox-image" alt="" />
+  <button class="lightbox-next" type="button" aria-label="Next image"></button>
+</dialog>
+
+<script>
+  let albumController: AbortController | undefined;
+
+  const setupAlbum = () => {
+  albumController?.abort();
+  albumController = new AbortController();
+  const { signal } = albumController;
+  const album = document.querySelector<HTMLElement>("[data-album]");
+  if (!album) return;
+
+  const dialog = document.querySelector<HTMLDialogElement>(".lightbox");
+  const dialogImage = document.querySelector<HTMLImageElement>(".lightbox-image");
+  const imageButtons = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-image-index]"));
+  const images = imageButtons.map((button) => {
+    const image = button.querySelector("img");
+
+    return {
+      src: image?.src ?? "",
+      srcset: image?.srcset ?? "",
+      alt: image?.alt ?? "",
+    };
+  });
+  let currentIndex = 0;
+  let touchStart = 0;
+
+  const showImage = (index: number) => {
+    if (!dialogImage || images.length === 0) return;
+
+    currentIndex = (index + images.length) % images.length;
+    dialogImage.src = images[currentIndex].src;
+    dialogImage.srcset = images[currentIndex].srcset;
+    dialogImage.sizes = "80vw";
+    dialogImage.alt = images[currentIndex].alt;
+  };
+
+  imageButtons.forEach((button, index) => button.addEventListener("click", () => {
+    showImage(index);
+    dialog?.showModal();
+  }, { signal }));
+
+  document.querySelector(".lightbox-close")?.addEventListener("click", () => dialog?.close(), { signal });
+  document.querySelector(".lightbox-previous")?.addEventListener("click", () => showImage(currentIndex - 1), { signal });
+  document.querySelector(".lightbox-next")?.addEventListener("click", () => showImage(currentIndex + 1), { signal });
+  dialog?.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); }, { signal });
+  dialog?.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") showImage(currentIndex - 1);
+    if (event.key === "ArrowRight") showImage(currentIndex + 1);
+  }, { signal });
+  dialog?.addEventListener("touchstart", (event) => { touchStart = event.touches[0]?.clientX ?? 0; }, { passive: true, signal });
+  dialog?.addEventListener("touchend", (event) => {
+    const touchEnd = event.changedTouches[0]?.clientX ?? touchStart;
+    if (Math.abs(touchEnd - touchStart) < 50) return;
+    showImage(currentIndex + (touchEnd < touchStart ? 1 : -1));
+  }, { passive: true, signal });
+
+  const scrollButton = document.querySelector<HTMLButtonElement>(".scroll-top");
+  const updateScrollButton = () => scrollButton?.classList.toggle("show", window.scrollY > window.innerHeight);
+  window.addEventListener("scroll", updateScrollButton, { passive: true, signal });
+  scrollButton?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }), { signal });
+
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const revealElements = album?.querySelectorAll(".reveal") ?? [];
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        observer.unobserve(entry.target);
+      }
+    }), { rootMargin: "0px 0px -8%" });
+
+    document.documentElement.classList.add("reveal-ready");
+    revealElements.forEach((element) => observer.observe(element));
+    signal.addEventListener("abort", () => observer.disconnect(), { once: true });
+  } else {
+    album?.querySelectorAll(".reveal").forEach((element) => element.classList.add("revealed"));
+  }
+  };
+
+  document.addEventListener("astro:page-load", setupAlbum);
+</script>
