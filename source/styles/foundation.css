@@ -30,7 +30,6 @@ body {
   margin: 0;
   font-family: "Kabel", sans-serif;
   font-weight: 300;
-  font-synthesis: none;
   color: var(--color-primary);
   background-color: var(--color-background);
 }
